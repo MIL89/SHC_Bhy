@@ -103,7 +103,7 @@ function login () {
 
     // DOne
     alert('User Logged In!!')
-    location.replace("directory.html")
+    location.replace("search_page.html")
 
   })
   .catch(function(error) {

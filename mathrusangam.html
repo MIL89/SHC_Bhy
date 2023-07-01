@@ -29,6 +29,54 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+        <style>
+
+
+.flip-card {
+  background-color: transparent;
+  width: 330px;
+  height: 480px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: blue;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: darkred;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+
+
+
 </head>
 
 <body>
@@ -47,7 +95,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
                 <a href="events.html" class="nav-item nav-link">Events</a>
                 <div class="nav-item dropdown">
@@ -60,7 +108,7 @@
                     </div>
                 </div>
                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Associations</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Associations</a>
                     <div class="dropdown-menu bg-light border-0 m-0">
                         <a href="pithruvedhi.html" class="dropdown-item">Pithruvedi</a>
                         <a href="mathrusangam.html" class="dropdown-item">Mathrusangam</a>
@@ -118,8 +166,13 @@
 
  <div class="container-xxl py-5">
         <div style="text-align: justify;" class="container">
+            <img src="img/math_logo.jpg" alt="Snow" style="height: 120px; width: 140px; float: left; margin-right: 40px;">
+              <h1  style="padding-top:40px;" class="display-6 mb-5"> Mathrusangam</h1>
+             
+             <br>
+             <br>
             <div class="row g-5">
-
+                
 <span>
     
     Under the strong and dynamic leadership of Rev. Fr. Binoy, Mother Superior Vimal Maria, President Mrs. Annie Varghese, Secretary Mrs. Saya Paul, Treasurer Mrs. Elizabeth Kuriachan and committee members, our mathrusangam is working very effectively. We have 180 members. Few main activities are listed below:
@@ -164,10 +217,20 @@ To develop the skill of rosary making among the parish Bhayander Mathrusangam ha
                      <div style="padding-top: -15%;" class="container-xxl py-5">
                             <div class="container">
                                
-                    <h5>The 2021-2023 committe members are:</h5><br>
-                                   <ul>
+                    <h3>Committe members:</h3><br>
 
-                     <li>Mother Superior </li> 
+
+
+
+
+<img style ="width:70% ; height: 60%; float: right; padding-left: 20%; padding-top: 5%;" class="img-fluid me-3" src="img/math_com.jpg" alt="" >
+                        <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+       <ul style="color: white; text-align: left;">
+
+<br>
+                    <li>Mother Superior </li> 
                     <li>Mrs. Annie Varghese (President)</li>
                     <li>Mrs. Saya Paul (Secretary)</li>
                     <li>Mrs. Latha Francis (Joint-Secretary)</li>
@@ -186,6 +249,26 @@ To develop the skill of rosary making among the parish Bhayander Mathrusangam ha
                     <li>Mrs. Beena Robert</li>
                     <li>Mrs. Alice Thomas</li>
                     </ul>  
+    </div>
+    <div class="flip-card-back" style="text-align:center; padding-top: 50%;">
+      <h1>Our Team</h1> 
+      <p>For the year 2021-2023</p> 
+    
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                                 
                      
                                
                             </div>

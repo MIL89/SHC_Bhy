@@ -58,9 +58,24 @@
         .popup {
 
                 width: 100%;
+                height:50% ;
 
          }
 }
+
+
+
+@media (max-width: 991.98px) {
+        .title{
+
+            font-size: 40%;
+           font-family: 'Vivaldi', sans-serif; 
+           
+         }
+}
+
+
+
 
             .move{
 
@@ -302,8 +317,7 @@ a span{
 
     </style>
 
-    <meta http-equiv="content-type" content="text/html">
-    <link rel="stylesheet" type="text/css" href="add_to_home_screen/add-to-homescreen-master/style/addtohomescreen.css">
+    
 </head>
 
 <body>
@@ -333,7 +347,7 @@ a span{
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
         <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0 " style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; " src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
+            <h1 class="display-4 m-0 title" style=" font-family: 'Vivaldi', sans-serif; font-size: 230%;" ><img  class="img-fluid me-3" style ="max-height:100px; margin-bottom:-13px ; margin-top:-12px; " src="img/icon/sacred.jpg" alt="">Sacred Heart Church</h1>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -349,7 +363,7 @@ a span{
                         <a href="parish.html" class="dropdown-item">Parish Council</a>
                         <a href="units.html" class="dropdown-item">Units</a>
                         <a href="catechism.html" class="dropdown-item">Catechism</a>
-                        <a href="forane.html" class="dropdown-item">Forane</a>
+                        
                     </div>
                 </div>
                <div class="nav-item dropdown">
@@ -448,67 +462,8 @@ a span{
   
             <h3 class="fonts" style="margin-bottom: 60px; text-align: center;">Upcoming Events</h3>
         
-  <ul >
-    <li>
-      <a href="#">
-        <span></span>
-       
-        <img style="margin-left: -5px;" width="100%" height="100%" src="img/event1.png"> 
-        
-      </a>
-    </li>
-   
-    <li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-
-<li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    <li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    <li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    <li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    <li>
-      <a href="#" >
-        <span></span>
-        <h2>Title-2</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <span></span>
-        <h2>Title-3</h2>
-        <p>This is Sample Content</p>
-      </a>
-    </li>
-    </ul>
+    <div data-tockify-component="calendar" data-tockify-calendar="shcbhy"></div>
+<script data-cfasync="false" data-tockify-script="embed" src="https://public.tockify.com/browser/embed.js"></script>
 
   </div>
 <div class="flex-shrink-0 me-3 move">
@@ -655,6 +610,33 @@ a span{
     </div>
     <!-- Holy Mass Timing End -->
 
+<div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6 mb-5">Gospel Reading</h1>
+            </div>
+            <div class="ms-4">
+                            <h5 class="mb-3">Daily Readings</h5>
+                            <span>Timing: Morning in Convent</span>
+                        </div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
 
     <!-- Events Start -->
     <div class="container-xxl py-5">
@@ -760,7 +742,7 @@ a span{
                             </div>
                         </div>
                         <div class="bg-light text-center p-4">
-                            <h5>FR. Binoy</h5>
+                            <h5>Fr. Binoy</h5>
                             <span class="text-primary">Vicar</span>
                         </div>
                     </div>
@@ -965,15 +947,7 @@ function closeNav() {
 }
 </script>
 
-    <script type="text/javascript" src="add_to_home_screen/add-to-homescreen-master/src/addtohomescreen.js"></script>
-
-    <script>
-        if((("standalone" in window.navigator) && !window.navigator.standalone)||(!window.matchMedia('(display-mode: standalone)').matches)
-            ){
-            addToHomeScreen();
-        }
-
-    </script>
+   
 </body>
 
 </html>
