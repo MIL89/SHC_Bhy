@@ -314,10 +314,27 @@ a span{
 }
 
 
+.datee{
+    width:20%;
+}
 
     </style>
 
+  <link href="assets/css/bootstrap-datepicker.css" rel="stylesheet" />
+
+  <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+  
+  <style type="text/css">
     
+    .ui-datepicker {
+   background: #999;
+   border: 1px solid #555;
+   color: ##999;
+   width: 550px;
+}
+  </style>
 </head>
 
 <body>
@@ -610,18 +627,34 @@ a span{
     </div>
     <!-- Holy Mass Timing End -->
 
+
+
 <div class="container-xxl py-5">
+
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <h1 class="display-6 mb-5">Gospel Reading</h1>
             </div>
             <div class="ms-4">
-                            <h5 class="mb-3">Daily Readings</h5>
-                            <span>Timing: Morning in Convent</span>
+                            <h3 class="mb-3">Readings for the selected Day:</h3>
+                            
                         </div>
 
 
+  <div class="container">
+    <div class="col-xs-3">
+    <div class="controls">
 
+              <input type="date" id="datepicker"  class="datepicker form-control datee" onchange="displayText()">
+              
+</div>
+</div>
+
+
+</div>
+
+
+<span> Reading are: <p id="textDisplay"></p></span>
 
 
 
@@ -948,6 +981,36 @@ function closeNav() {
 </script>
 
    
+   <script>
+    // Function to display text based on the selected date
+    function displayText() {
+      var selectedDate = document.getElementById("datepicker").value;
+      var displayElement = document.getElementById("textDisplay");
+
+      // Convert the selected date string to a Date object
+      var date = new Date(selectedDate);
+
+      // Extract the month and day from the selected date
+      var month = date.getMonth();
+      var day = date.getDate();
+
+      // Determine the text based on the month and day
+      var text = "";
+
+      if (month === 5 && day === 26) {
+        text = "Happy New Year!";
+      } else if (month === 11 && day === 25) {
+        text = "Merry Christmas!";
+      } else {
+        text = "No special text for this date.";
+      }
+
+      // Display the text
+      displayElement.innerHTML = text;
+    }
+  </script>
+
+
 </body>
 
 </html>
