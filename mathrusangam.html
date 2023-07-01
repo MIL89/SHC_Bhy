@@ -29,11 +29,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <!-- <link href="css/style1.css" rel="stylesheet">
+ -->
 
         <style>
 
-
+/*
 .flip-card {
   background-color: transparent;
   width: 330px;
@@ -73,6 +74,329 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+
+*/
+
+   ul li {
+            list-style: square;
+        }
+  
+        ul li::marker {
+            animation-name: GFG;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+  
+        ul li:nth-child(1)::marker {
+            animation-delay: 0;
+        }
+  
+        ul li:nth-child(2)::marker {
+            animation-delay: 0.5s;
+        }
+  
+        ul li:nth-child(3)::marker {
+            animation-delay: 1.0s;
+        }
+  
+        ul li:nth-child(4)::marker {
+            animation-delay: 1.5s;
+        }
+  
+        ul li:nth-child(5)::marker {
+            animation-delay: 2.0s;
+        }
+            
+         ul li:nth-child(6)::marker {
+            animation-delay: 2.5s;
+        }
+        ul li:nth-child(7)::marker {
+            animation-delay: 3.0s;
+        }
+        ul li:nth-child(8)::marker {
+            animation-delay: 3.5s;
+        }
+        ul li:nth-child(9)::marker {
+            animation-delay: 4.0s;
+        }
+        ul li:nth-child(10)::marker {
+            animation-delay: 4.5s;
+        }
+        ul li:nth-child(11)::marker {
+            animation-delay: 5.0s;
+        }
+        ul li:nth-child(12)::marker {
+            animation-delay: 5.5s;
+        }
+        ul li:nth-child(13)::marker {
+            animation-delay: 6.0s;
+        }
+        ul li:nth-child(14)::marker {
+            animation-delay: 6.5s;
+        }
+
+        ul li:nth-child(15)::marker {
+            animation-delay: 7.0s;
+        }
+        ul li:nth-child(16)::marker {
+            animation-delay: 7.5s;
+        }
+        ul li:nth-child(17)::marker {
+            animation-delay: 8.0s;
+        }
+        ul li:nth-child(18)::marker {
+            animation-delay: 8.5s;
+        }
+        ul li:nth-child(19)::marker {
+            animation-delay: 9.0s;
+        }
+
+            ul li:nth-child(20)::marker {
+            animation-delay: 9.5s;
+        }
+        @keyframes GFG {
+            from {
+                font-size: 12px;
+            }
+  
+            to {
+                font-size: 30px;
+                color: green;
+            }
+        }
+
+
+/**timeline3*/
+
+
+/******************* Timeline Demo - 5 *****************/
+
+.main-timeline3 {
+    overflow: hidden;
+    position: relative
+}
+
+.main-timeline3 .timeline {
+    position: relative;
+    margin-top: -79px
+}
+
+.main-timeline3 .timeline:first-child {
+    margin-top: 0
+}
+
+.main-timeline3 .timeline-icon,
+.main-timeline3 .year {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0
+}
+
+.main-timeline3 .timeline:after,
+.main-timeline3 .timeline:before {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both
+}
+
+.main-timeline3 .timeline:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2
+}
+
+.main-timeline3 .timeline-icon {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 25px solid transparent;
+    border-top-color: #f44556;
+    border-right-color: #f44556;
+    z-index: 1;
+    transform: rotate(45deg)
+}
+
+.main-timeline3 .year {
+    display: block;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    font-size: 30px;
+    font-weight: 700;
+    color: #f44556;
+    text-align: center;
+    transform: rotate(-45deg)
+}
+
+.main-timeline3 .timeline-content {
+    width: 35%;
+    float: right;
+    background: #f44556;
+    padding: 30px 20px;
+    margin: 50px 0;
+    box-shadow: 0 10px 25px -10px rgba(72, 29, 99, .3);
+    z-index: 1;
+    position: relative
+}
+
+.main-timeline3 .timeline-content:before {
+    content: "";
+    width: 20%;
+    height: 15px;
+    background: #f44556;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    z-index: -1;
+    transform: translateY(-50%)
+}
+
+.main-timeline3 .title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 10px
+}
+
+.main-timeline3 .description {
+    font-size: 16px;
+    color: #fff;
+    line-height: 24px;
+    margin: 0
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-icon {
+    transform: rotate(-135deg);
+    border-top-color: #e97e2e;
+    border-right-color: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(2n) .year {
+    transform: rotate(135deg);
+    color: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content {
+    float: left
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+    left: auto;
+    right: -20%
+}
+
+.main-timeline3 .timeline:nth-child(2n) .timeline-content,
+.main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+    background: #e97e2e
+}
+
+.main-timeline3 .timeline:nth-child(3n) .timeline-icon {
+    border-top-color: #13afae;
+    border-right-color: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(3n) .year {
+    color: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(3n) .timeline-content,
+.main-timeline3 .timeline:nth-child(3n) .timeline-content:before {
+    background: #13afae
+}
+
+.main-timeline3 .timeline:nth-child(4n) .timeline-icon {
+    border-top-color: #105572;
+    border-right-color: #105572
+}
+
+.main-timeline3 .timeline:nth-child(4n) .year {
+    color: #105572
+}
+
+.main-timeline3 .timeline:nth-child(4n) .timeline-content,
+.main-timeline3 .timeline:nth-child(4n) .timeline-content:before {
+    background: #105572
+}
+
+@media only screen and (max-width:1199px) {
+    .main-timeline3 .timeline {
+        margin-top: -103px
+    }
+    .main-timeline3 .timeline-content:before {
+        left: -18%
+    }
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        right: -18%
+    }
+}
+
+@media only screen and (max-width:990px) {
+    .main-timeline3 .timeline {
+        margin-top: -127px
+    }
+    .main-timeline3 .timeline-content:before {
+        left: -2%
+    }
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        right: -2%
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .main-timeline3 .timeline {
+        margin-top: 0;
+        overflow: hidden
+    }
+    .main-timeline3 .timeline:before,
+    .main-timeline3 .timeline:nth-child(2n):before {
+        box-shadow: none
+    }
+    .main-timeline3 .timeline-icon,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-icon {
+        margin-top: -30px;
+        margin-bottom: 20px;
+        position: relative;
+        transform: rotate(135deg)
+    }
+    .main-timeline3 .timeline:nth-child(2n) .year,
+    .main-timeline3 .year {
+        transform: rotate(-135deg)
+    }
+    .main-timeline3 .timeline-content,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content {
+        width: 100%;
+        float: none;
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        padding: 25px 20px;
+        margin: 0 auto
+    }
+    .main-timeline3 .timeline-content:before,
+    .main-timeline3 .timeline:nth-child(2n) .timeline-content:before {
+        width: 15px;
+        height: 25px;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, 0)
+    }
+}
+
+
+
 </style>
 
 
@@ -210,24 +534,86 @@ To develop the skill of rosary making among the parish Bhayander Mathrusangam ha
 </span>
   
 
+
+
 </div>
 </div>
 </div>
+<div class="think">  
+                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Our Journey</h1>
+       </div>
+
+
+
+
+<div class="container">
+<h3 class="card-title"></h3>
+<div class="row">
+<div class="col-md-12">
+<div class="main-timeline3">
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2018</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Desginer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2017</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Developer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2016</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Desginer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+<div class="timeline">
+<div class="timeline-icon"><span class="year">2015</span></div>
+<div class="timeline-content">
+<h3 class="title">Web Developer</h3>
+<p class="description">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lacinia mi ultrices, luctus nunc ut, commodo enim. Vivamus sem erat.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
 
                      <div style="padding-top: -15%;" class="container-xxl py-5">
                             <div class="container">
                                
-                    <h3>Committe members:</h3><br>
+                    <div class="think">  
+                        <h1  style="text-align: center; margin-top: 5%;" class="display-6 mb-5"> Our Committe</h1>
+       </div>
+<br>
+<br>
+
+<div style=" margin-left:20px;">
 
 
+<img style ="width:73% ; height: 60%; float: right; padding-left: 15%; padding-top: 12%;" class="img-fluid me-3" src="img/math_com.jpg" alt="" >
+                       
 
-
-
-<img style ="width:70% ; height: 60%; float: right; padding-left: 20%; padding-top: 5%;" class="img-fluid me-3" src="img/math_com.jpg" alt="" >
-                        <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-       <ul style="color: white; text-align: left;">
+    </div>                  
+         <ul>
 
 <br>
                     <li>Mother Superior </li> 
@@ -248,29 +634,10 @@ To develop the skill of rosary making among the parish Bhayander Mathrusangam ha
                     <li>Mrs. Mini Sabu</li>
                     <li>Mrs. Beena Robert</li>
                     <li>Mrs. Alice Thomas</li>
-                    </ul>  
-    </div>
-    <div class="flip-card-back" style="text-align:center; padding-top: 50%;">
-      <h1>Our Team</h1> 
-      <p>For the year 2021-2023</p> 
-    
-    </div>
-  </div>
-</div>
+                </ul>  
+  
 
-
-
-
-
-
-
-
-
-
-
-                                 
-                     
-                               
+  
                             </div>
                         </div>
 
