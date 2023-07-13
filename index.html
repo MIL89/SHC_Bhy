@@ -1021,7 +1021,10 @@ function closeNav() {
     }
   </script>
 <script>
-    
+
+    if ('serviceWorker' in navigator) {
+   navigator.serviceWorker.register("/serviceworker.js");
+}
 let deferredPrompt;
     var  div =document.querySelector('.add-to');
     div.style.display = 'none';
