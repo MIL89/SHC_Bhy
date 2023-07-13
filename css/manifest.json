@@ -15,7 +15,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "css/android-icon-512x512.png",
+      "src": "css/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
