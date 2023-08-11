@@ -61,6 +61,41 @@
         ]
     });
 
+
+    // Check if A2HS is supported and if the user is on a mobile device
+if ('serviceWorker' in navigator && 'PushManager' in window && window.matchMedia('(display-mode: standalone)').matches === false) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').then(registration => {
+      console.log('Service Worker registered with scope:', registration.scope);
+    }).catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+  });
+
+  // Listen for the "beforeinstallprompt" event
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault(); // Prevent the default prompt
+    const deferredPrompt = event;
+    
+    // Show a custom A2HS button and handle user interaction
+    const installButton = document.getElementById('install-button');
+    installButton.style.display = 'block';
+    installButton.addEventListener('click', () => {
+      installButton.style.display = 'none';
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then(choiceResult => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+}
+
+
     
 })(jQuery);
 
